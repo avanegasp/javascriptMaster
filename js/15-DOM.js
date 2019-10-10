@@ -28,3 +28,9 @@
 
 
 // COMO SELECCIONAR VARIAS ETIQUETAS
+
+var todosLosDivs = document.getElementsByTagName('div')
+console.log(todosLosDivs)
+
+
+todosLosDivs.forEach(valor, indice)
