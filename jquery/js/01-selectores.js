@@ -44,4 +44,19 @@ $('.sin_borde').click(function(){
 
  var tag_parent = $('#caja .resaltado').parent().parent().find('resaltado') // sirve cualquiera de las dos formas
  console.log(tag_parent)
+
+//focus y blur
+
+var nombre = $("#nombre")
+
+nombre.focus(function(){
+  $(this).css("border", "2px solid green")
+})
+
+nombre.blur(function(){
+  // $(this).css("border", "2px solid transparent")
+  $(this).css("border", "2px solid #ccc")
+  $(".cajita").text($(this).val()).show()
+})
+
 })
