@@ -32,6 +32,22 @@ $('document').ready(function(){
     }).done(function(){
       alert("usuario añadido correctamente")
     })
+
+    $.ajax({
+      type:'POST',
+      url:$(this).attr("action"),
+      data: user,
+      beforeSend: function(){
+        console.log("Envíando usuario...")
+      },
+      success: function(response){
+        console.log(response)
+      },
+      error: function(){
+        console.log("A ocurrido un error")
+      },
+      timeout:1000
+    })
     return false;
   })
 })
